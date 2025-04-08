@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background-color: rgb(6, 6, 39);
   color: white;
@@ -17,15 +22,25 @@ body {
   align-items: center;
   height: 60px;
   background-color: rgb(24, 24, 74);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* makes sure it stays above other content */
 }
 
 .fname {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.5em;
 }
 
 .name {
   color: rgb(116, 45, 183);
+  font-size: 1.1em;
+}
+
+#cast {
+  color: rgb(116, 45, 183);
+  font-size: 1.15em;
 }
 
 .navigator {
@@ -34,7 +49,7 @@ body {
 
 .navigator ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .navigator ul li {
@@ -64,11 +79,384 @@ body {
   margin-left: 5rem;
   width: 30%;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.6em;
 }
 
 #img01 img {
   height: 30rem;
   width: 30rem;
   margin: 0 8rem 1rem 0;
+  filter: drop-shadow(3px 4px 5px rgba(92, 92, 132, 0.835));
+  transition: transform 0.5s ease-in-out;
+}
+
+#img01 img:hover {
+  transform: scale(1.051);
+}
+
+#sec01 {
+  margin: 4rem 4rem;
+}
+
+/* section second */
+
+.about {
+  margin: 5rem;
+  padding: 1rem;
+}
+
+.about h {
+  margin: 10px 0;
+  padding: 20px 0;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.about p {
+  margin: 10px;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(143, 143, 214);
+}
+
+.about span {
+  color: rgb(172, 181, 226);
+  font-weight: 800;
+}
+
+#sec02 {
+  margin: 4rem 4rem;
+}
+
+/* section third */
+
+.project {
+  margin: 5rem;
+  padding: 1rem;
+  height: 15rem;
+}
+
+.project h {
+  margin: 10px 0;
+  padding: 20px 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.project-placeholder {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #aaa;
+  margin-top: 2rem;
+}
+
+#sec03 {
+  margin: 5rem;
+}
+
+/* section fourth */
+
+.contact {
+  margin: 4rem;
+}
+
+.contact div {
+  margin: 4rem 4rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#img02 img {
+  height: 35rem;
+  width: 35rem;
+}
+
+.contact h {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+#form {
+  font-size: 1.5em;
+}
+
+.contact button {
+  margin-top: 1rem;
+  font-size: 1em;
+  transition: transform 0.1s ease-in;
+  cursor: pointer;
+}
+
+#btnR {
+  height: 30px;
+  width: 100px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#btnR:hover {
+  background-color: blueviolet;
+}
+
+#btnH:hover {
+  background-color: blueviolet;
+}
+
+#btnH {
+  height: 30px;
+  width: 60px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: rgb(70, 31, 106);
+  color: white;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+}
+
+input {
+  height: 2rem;
+  width: 90%;
+  max-width: 300px;
+}
+
+
+.social-icons {
+  gap: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+/* Icon Colors */
+.linkedin i {
+  color: #0077b5;
+}
+
+.github i {
+  color: #525050;
+}
+
+.email i {
+  color: #d44638;
+}
+
+.instagram i {
+  color: #e1306c;
+}
+
+/* Glow on Hover */
+.linkedin:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #0077b5);
+}
+
+.github:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #525050);
+}
+
+.email:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #d44638);
+}
+
+.instagram:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #e1306c);
+}
+
+#hr04 {
+  margin: 5rem;
+}
+
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  color: #bbb;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* --- Responsive Design for Tablets and Mobile --- */
+
+@media (max-width: 1024px) {
+  .navigator {
+    width: 50%;
+  }
+
+  #intro {
+    width: 45%;
+    font-size: 1.2em;
+    margin-left: 2rem;
+  }
+
+  #img01 img {
+    height: 25rem;
+    width: 25rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navigator {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navigator ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    margin-top: 100px
+  }
+
+  #intro {
+    width: 90%;
+    font-size: 1.3em;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  #img01 img {
+    height: 20rem;
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  .about, .project, .contact {
+    margin: 2rem 1rem;
+  }
+
+  .about p, .project p {
+    font-size: 1em;
+  }
+
+  #form {
+    font-size: 1.1em;
+  }
+
+  .contact div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fname {
+    font-size: 1.2em;
+  }
+
+  .name {
+    font-size: 1em;
+  }
+
+  #img01 img {
+    height: 16rem;
+    width: 16rem;
+  }
+
+  .footer-icons a {
+    font-size: 1.2rem;
+    margin: 0 5px;
+  }
+
+  .social-icons i {
+    font-size: 2rem;
+  }
+}
+
+/* Burger Menu Styling */
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Nav for small screens */
+@media screen and (max-width: 600px) {
+  .burger {
+    display: block;
+  }
+
+  .navigator ul {
+    flex-direction: column;
+    background-color: rgb(24, 24, 74);
+    width: 100%;
+    display: none;
+  }
+
+  .navigator ul.active {
+    display: flex;
+  }
+
+  .navigator ul li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navigator {
+    width: auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .fname {
+    margin-bottom: 0.5rem;
+  }
 }

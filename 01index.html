@@ -21,14 +21,19 @@
 
     <nav class="nav">
 
-      <div class="fname">Vikram <span class="name">Gond</span></div>
+      <div class="fname">Vikram <span id="cast">Gond</span></div>
+
+      <!-- Burger Icon -->
+      <div class="burger" id="burger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
 
       <div class="navigator">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Projects</a></li>
-          <li><a href="/">Contact</a></li>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -39,7 +44,7 @@
   <section class="home" id="home">
 
     <div id="intro">
-      
+
       <h>
         Hi, I'm <span class="name">Vikram</span> — a curious mind and passionate Computer Science student who
         loves turning ideas into digital reality.
@@ -52,12 +57,124 @@
 
   </section>
 
+  <hr id="sec01">
+
+  <section class="about" id="about">
+
+    <div>
+      <h>
+        About
+      </h>
+    </div>
+
+    <div>
+      <p>
+        Hi, I'm <span>Vikram</span> — a passionate and forward-thinking Computer Science undergraduate with a growing
+        skill set in
+        web development, app creation, and game development. I'm currently focused on front-end technologies like
+        <span>HTML</span>
+        and <span>CSS</span>, and actively learning <span>JavaScript</span>, <span>Python</span>, and other modern tools
+        to bring dynamic and responsive
+        projects to life.
+
+        I love building practical solutions, whether it's a smart attendance and salary management app, a creative game
+        concept, or a clean and user-friendly web application. My goal is to use technology to solve real-world problems
+        and keep learning with every project I build.
+
+        Beyond coding, I enjoy exploring UI/UX design using Figma, understanding system performance (like optimizing my
+        own laptop), and staying updated with the latest tech trends. I'm also working on improving my English
+        communication daily, and developing a strong foundation for a future in full-stack development.
+
+        Every day is a chance to grow, create, and challenge myself — one line of code at a time.
+      </p>
+    </div>
+
+  </section>
+
+  <hr id="sec02">
+
+  <section class="project" id="project">
+
+    <h>Projects</h>
+    <div class="project-placeholder">
+      Projects will be displayed here soon. Stay tuned!
+    </div>
+
+  </section>
+
+  <hr id="sec03">
+
+  <section class="contact" id="contact">
+    <div>
+      <h>
+        Contact
+      </h>
+    </div>
+
+    <div id="form">
+      <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Name" required><br>
+        <label>E-mail:</label>
+        <input type="email" placeholder="E-mail" required><br>
+        <label>Mobile:</label>
+        <input type="tel" placeholder="Contact" required><br>
+        <button id="btnR">Resume</button>
+        <button id="btnH">Hire</button>
+      </form>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/vikram-gond-300180335" target="_blank" class="linkedin">
+        <i class="fa-brands fa-linkedin fa-3x"></i>
+      </a>
+
+      <a href="https://github.com/vikramgond" target="_blank" class="github">
+        <i class="fa-brands fa-github fa-3x"></i>
+      </a>
+
+      <a href="mailto:vikrmagond22052@gmail.com" class="email">
+        <i class="fa-solid fa-envelope fa-3x"></i>
+      </a>
+
+      <a href="https://instagram.com/yourusername" target="_blank" class="instagram">
+        <i class="fa-brands fa-instagram fa-3x"></i>
+      </a>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+     
+      <div class="footer-content">
+        <p>© 2025 Vikram Gond | All rights reserved.</p>
+        <div class="footer-icons">
+          <a href="https://linkedin.com/in/vikram-gond-300180335" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/vikramgond" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:vikrmagond22052@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/yourusername" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+  </footer>
+
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
   <script>
     var typed = new Typed('#element', {
       strings: ['Web Developer', 'Web Games', 'Web Desiging', 'Game Development'],
       typeSpeed: 70,
+    });
+  </script>
+
+  <!-- Burger Menu Script -->
+  <script>
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+
+    burger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
   </script>
 
