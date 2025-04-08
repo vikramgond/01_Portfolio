@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(6, 6, 39);
+  color: white;
+  font-family: "Poppins", sans-serif
+}
+
+/* header */
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(24, 24, 74);
+}
+
+.fname {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.name {
+  color: rgb(116, 45, 183);
+}
+
+.navigator {
+  width: 30%;
+}
+
+.navigator ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigator ul li {
+  list-style: none;
+  transition: transform 0.3s ease;
+}
+
+.navigator ul li:hover {
+  transform: scale(1.15);
+}
+
+.navigator ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* section first */
+
+.home {
+  margin: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#intro {
+  margin-top: 9rem;
+  margin-left: 5rem;
+  width: 30%;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+#img01 img {
+  height: 30rem;
+  width: 30rem;
+  margin: 0 8rem 1rem 0;
+}
